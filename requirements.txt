@@ -104,16 +104,9 @@ uvloop
 python-dotenv
 gpytranslate
 glitch_this
-NumPy
 opencv-python-headless
 countryinfo
 faker
 PyDictionary==2.0.1
-ffmpeg
-python-rapidjson
-heroku3
-git+https://github.com/python-telegram-bot/ptbcontrib.git
 cowpy
-selenium
 httpx[http2]>=0.18.1,<1.0.0
-hiredis
