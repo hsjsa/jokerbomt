@@ -14,14 +14,14 @@ class Config(object):
     # REQUIRED
     # Login to https://my.telegram.org and fill in these slots with the details given by it
 
-    API_ID = 1234568 # integer value, dont use ""
-    API_HASH = ""
-    TOKEN = ""  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
-    BOT_USERNAME = ""
+    API_ID = 1383845  # integer value, dont use ""
+    API_HASH = "0e3d2c299cc3c5cc26c283cecd2eb97c"
+    TOKEN = "1384019653:AAGeq9rGVQqlTcP45sWZDhW2oEQ2YZ8bmGs"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
+    BOT_USERNAME = "Mrjokerlk_bot"
     OWNER_ID = 1131653685   # If you dont know, run the bot and do /id in your private chat with it, also an integer
     OWNER_USERNAME = "kavinduaj"
-    ARQ_API_URL = ""
-    ARQ_API_KEY = ""
+    ARQ_API_URL = "https://thearq.tech"
+    ARQ_API_KEY = "ULYTMW-MOFYPS-KLWEUW-KNQWVO-ARQ"
     SUDO_USERS = 1131653685
     SUPPORT_USERS = 1131653685
     WHITELIST_USERS = 1131653685
@@ -34,17 +34,17 @@ class Config(object):
     )  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
 
     # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = ""  
-    REDIS_URI = ""
+    SQLALCHEMY_DATABASE_URI = "postgres://cbebwnpaokoyoi:d85b87f5e38a6e27c256dc047eb4c230950f96a28495cf04d7d12ec689bba029@ec2-44-194-54-123.compute-1.amazonaws.com:5432/d7bgsb3jb9t75a"  
+    REDIS_URI = "redis://default:oCSncAKDtwhxRKJvl715@containers-us-west-11.railway.app:5601"
     LOAD = []
     NO_LOAD = ["rss", "cleaner", "connection", "math"]
     WEBHOOK = False
     INFOPIC = True
     URL = None
-    SPAMWATCH_API = ""  # go to support.spamwat.ch to get key
+    SPAMWATCH_API = "DFOm~tAD3jGW_l_pxisfl1FETDTytFaz831fAciaKZg9kCoAYuPAP0lYSO5QDdbC"  # go to support.spamwat.ch to get key
     SPAMWATCH_SUPPORT_CHAT = "@SpamWatchSupport"
-    OPENWEATHERMAP_ID = ""
- 
+    OPENWEATHERMAP_ID = "d1771e86e5540a19ac86af534754cb13"
+
     # OPTIONAL
     ##List of id's -  (not usernames) for users which have sudo access to the bot.
     DRAGONS = "1131653685"
@@ -66,9 +66,9 @@ class Config(object):
     BAN_STICKER = ""  # banhammer marie sticker id, the bot will send this sticker before banning or kicking a user in chat.
     ALLOW_EXCL = True  # Allow ! commands as well as / (Leave this to true so that blacklist can work)
     CASH_API_KEY = (
-        "G"  # Get your API key from https://www.alphavantage.co/support/#api-key
+        "GFO4UK7F4NGUMYTT"  # Get your API key from https://www.alphavantage.co/support/#api-key
     )
-    TIME_API_KEY = "xyz"  # Get your API key from https://timezonedb.com/api
+    TIME_API_KEY = "1AW4Q9DTFF4"  # Get your API key from https://timezonedb.com/api
     WALL_API = (
         "xyz"  # For wallpapers, get one from https://wall.alphacoders.com/api.php
     )
@@ -78,8 +78,9 @@ class Config(object):
     YOUTUBE_API_KEY=""
     INFOPIC =""
     TEMP_DOWNLOAD_DIRECTORY = "./"
-    REM_BG_API_KEY = ""
-    MONGO_DB_URI = ""
+    REM_BG_API_KEY = "gQXc1AuEraj3numU671LhNhW"
+    MONGO_DB_URI = "mongodb+srv://mrjoker:kaj@cluster0.lqifl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    MONGO_DB = "mrjoker"
 
 
 class Production(Config):
@@ -88,4 +89,3 @@ class Production(Config):
 
 class Development(Config):
     LOGGER = True
-
