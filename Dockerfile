@@ -7,6 +7,6 @@ RUN python3 -m pip install -U pip
 
 COPY . .
 
-RUN python3 -m pip install -U -r requirements.txt
+RUN pip3 install -U -r requirements.txt
 
 CMD ["python3","-m","mrjoker"]
