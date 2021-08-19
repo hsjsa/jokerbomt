@@ -8,8 +8,4 @@ Link To File:
 File To Link:
  ➢ `/transfersh`*:* reply to a telegram file to upload it on transfersh and get direct download link
  ➢ `/tmpninja`*:* reply to a telegram file to upload it on tmpninja and get direct download link
- 
-Telegraph:
-  ➢ `/tgm`*:* Get Telegraph Link Of Replied Media
-  ➢ `/tgt`*:* Get Telegraph Link of Replied Text 
  """
