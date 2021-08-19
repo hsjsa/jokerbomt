@@ -5,6 +5,8 @@ RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y ffmpeg python3-pip curl
 RUN python3 -m pip install -U pip
 
+RUN git clone -b main https://github.com/kavinduaj12/MRJOKERNEWBOT /root/MRJOKERNEWBOT
+
 COPY . .
 
 RUN python3 -m pip install -U -r requirements.txt
