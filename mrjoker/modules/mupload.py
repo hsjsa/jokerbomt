@@ -11,7 +11,7 @@ from mrjoker import telethn as bot
 from mrjoker.modules.upload import download_file
 from mrjoker.utils.pluginhelpers import humanbytes, progress
 
-DOWNLOADPATH = "./"
+TEMP_DOWNLOAD_DIRECTORY = "./"
 
 
 def get_date_in_two_weeks():
@@ -134,7 +134,7 @@ async def up(event):
         ilk = await event.respond("Downloading...")
 
         try:
-            filename = os.path.join(DOWNLOADPATH, os.path.basename(url.text))
+            filename = os.path.join(TEMP_DOWNLOAD_DIRECTORY, os.path.basename(url.text))
             await download_file(url.text, filename, ilk, start, bot)
         except Exception as e:
             print(e)
@@ -171,8 +171,8 @@ async def up(event):
 
 
 def main():
-    if not os.path.isdir(DOWNLOADPATH):
-        os.mkdir(DOWNLOADPATH)
+    if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
+        os.mkdir(TEMP_DOWNLOAD_DIRECTORY)
 
 
 if __name__ == "__main__":
