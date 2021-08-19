@@ -74,7 +74,6 @@ cryptg
 cryptography
 python-arq
 aioredis
-pykeyboard
 aiofiles
 search_engine_parser
 aiofiles
