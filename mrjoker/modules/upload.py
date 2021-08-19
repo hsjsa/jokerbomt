@@ -2,7 +2,7 @@ import os
 import time
 import aiohttp
 
-from Cutiepii_Robot.utils.pluginhelpers import humanbytes, time_formatter
+from mrjoker.utils.pluginhelpers import humanbytes, time_formatter
 
 
 async def download_file(url, file_name, message, start_time, bot):
