@@ -34,7 +34,7 @@ class Config(object):
     )  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
 
     # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = "postgres://cbebwnpaokoyoi:d85b87f5e38a6e27c256dc047eb4c230950f96a28495cf04d7d12ec689bba029@ec2-44-194-54-123.compute-1.amazonaws.com:5432/d7bgsb3jb9t75a"  
+    SQLALCHEMY_DATABASE_URI = "postgresql://postgres:xsrDxZxEs8pLhCudhkHF@containers-us-west-12.railway.app:7044/railway"  
     REDIS_URI = "redis://default:oCSncAKDtwhxRKJvl715@containers-us-west-11.railway.app:5601"
     LOAD = []
     NO_LOAD = ["rss", "cleaner", "connection", "math"]
