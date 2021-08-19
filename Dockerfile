@@ -1,14 +1,9 @@
-FROM debian:latest
+FROM python:3.9.1-buster
 
-RUN apt-get update && apt-get upgrade -y
-
-RUN apt-get install -y ffmpeg python3-pip curl
-RUN python3 -m pip install -U pip
-
-RUN git clone -b main https://github.com/kavinduaj12/MRJOKERNEWBOT /root/MRJOKERNEWBOT
+WORKDIR /root/mrjoker
 
 COPY . .
 
-RUN python3 -m pip install -U -r requirements.txt
+RUN pip install -U -r requirements.txt
 
 CMD ["python3","-m","mrjoker"]
