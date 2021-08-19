@@ -8,7 +8,7 @@ import aiohttp
 from telethon import events
 
 from mrjoker import telethn as bot
-from mrjoker.modules.urluploader import download_file
+from mrjoker.modules.upload import download_file
 from mrjoker.utils.pluginhelpers import humanbytes, progress
 
 DOWNLOADPATH = "./mrjoker/Downloads/"
