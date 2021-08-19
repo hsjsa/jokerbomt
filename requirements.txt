@@ -57,3 +57,4 @@ asyncio
 python-arq
 telegraph
 opencv-python-headless
+countryinfo
