@@ -11,7 +11,7 @@ from mrjoker import telethn as bot
 from mrjoker.modules.upload import download_file
 from mrjoker.utils.pluginhelpers import humanbytes, progress
 
-DOWNLOADPATH = "./mrjoker/Downloads/"
+DOWNLOADPATH = "./"
 
 
 def get_date_in_two_weeks():
