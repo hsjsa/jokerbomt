@@ -1,4 +1,7 @@
-FROM python:3.9.1-buster
+FROM python:3.6-slim
+
+RUN apt-get update
+RUN apt-get install -y apt-utils build-essential gcc
 
 WORKDIR /root/mrjoker
 
