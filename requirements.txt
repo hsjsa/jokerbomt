@@ -56,4 +56,4 @@ fake-useragent
 asyncio
 python-arq
 telegraph
-opencv-python
+opencv-python-headless
