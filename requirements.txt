@@ -60,6 +60,7 @@ pycairo
 geopy
 pretty_errors
 psutil
+ffmpeg
 pynewtonmath
 pyrate-limiter
 spongemock
