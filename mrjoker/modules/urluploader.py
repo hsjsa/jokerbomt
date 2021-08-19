@@ -1,10 +1,13 @@
 import os
 import time
+import traceback
 import aiohttp
 import wget
+import sys
+import asyncio
 from telethon import events
 from mrjoker import telethn as bot
-from mrjoker.utils.uputils import humanbytes, time_formatter, progress
+from mrjoker.utils.uputils import humanbytes, time_formatter
 
 DOWNLOADPATH = "./" 
 
@@ -104,12 +107,12 @@ async def up(event):
         await ilk.delete()
 
         try:
-            orta = await event.respond("Uploading to Telegram...🤡")
+            orta = await event.respond("Uploading to Telegram...")
 
             dosya = await bot.upload_file(
                 filename,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                    progress(d, t, orta, start, "Uploading to Telegram...🤡")
+                    progress(d, t, orta, start, "Uploading to Telegram...")
                 ),
             )
 
