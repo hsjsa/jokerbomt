@@ -1,6 +1,5 @@
 import os
 import time
-import traceback
 import aiohttp
 import wget
 import sys
@@ -10,9 +9,6 @@ from mrjoker import telethn as bot
 from mrjoker.utils.uputils import humanbytes, time_formatter
 
 DOWNLOADPATH = "./" 
-
-from mrjoker.utils.uputils import humanbytes, time_formatter, progress
-
 
 async def download_file(url, file_name, message, start_time, bot):
     async with aiohttp.ClientSession() as session:
