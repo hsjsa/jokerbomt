@@ -1,6 +1,7 @@
 import os
 import time
 import aiohttp
+import traceback
 import wget
 import sys
 import asyncio
