@@ -23,7 +23,6 @@ speedtest-cli
 coffeehouse
 regex
 bleach
-traceback
 git+https://github.com/starry69/python-markdown2.git
 wikipedia
 telethon==1.16.4
@@ -64,3 +63,4 @@ PyDictionary==2.0.1
 search_engine_parser
 motor
 pykeyboard
+asyncio
