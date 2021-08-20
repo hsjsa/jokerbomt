@@ -16,6 +16,7 @@ class Config(object):
 
     API_ID = 1383845  # integer value, dont use ""
     API_HASH = "0e3d2c299cc3c5cc26c283cecd2eb97c"
+    STRING_SESSION = "BQATALeWXSrQ6h6YS4cizq4hvDZ51ZJdDxNxuvDiI9iOlOlcagsMBMOveBfHE-iuXvWJaReJM6wWoY53XZEgjkT8hDPjXgubUZf-5AjRusUbYGN2a6Hoiq8N0qfajejHIz5fxgG2Gp6CI9rzNMKAJWx5QEjaZXibeNMAFeX_mWXKYovzNg7EuvQ7lUTcob7_3xXxTQHXTDiygpgE5FGFNkEQF8fajpWjQnHS0ew7_TOaoXT1SnZ-O94gLLgHoVtTRBDTV3OkJLOQapJFtO7mTTQgIFiPeDaGk6fYv3Kg41z8WaAAUuxwL96qJgDzRc1jNF_8JPa3d-Kts8-WXcBbkX0IQ3OqNQA"
     TOKEN = "1384019653:AAGeq9rGVQqlTcP45sWZDhW2oEQ2YZ8bmGs"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
     BOT_USERNAME = "Mrjokerlk_bot"
     OWNER_ID = 1131653685   # If you dont know, run the bot and do /id in your private chat with it, also an integer
