@@ -65,3 +65,4 @@ motor
 pykeyboard
 asyncio
 ujson
+lyricsgenius
