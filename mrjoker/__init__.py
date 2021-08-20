@@ -215,7 +215,7 @@ arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("lkhitech", API_ID, API_HASH)
-pbot = Client("mrjoker", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN, session_name=STRING_SESSION)
+pbot = Client("mrjoker", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 #mbot = Client("mjbot", session_name=STRING_SESSION, api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
 
