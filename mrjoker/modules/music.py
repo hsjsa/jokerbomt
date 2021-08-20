@@ -1,7 +1,7 @@
 import os
 from pytgcalls import GroupCall
 import ffmpeg
-from mrjoker.config import API_ID, API_HASH, STRING_SESSION
+from mrjoker.Config import API_ID, API_HASH, STRING_SESSION
 from datetime import datetime
 from pyrogram import filters, Client, idle
 import requests
