@@ -13,7 +13,7 @@ from youtubesearchpython import SearchVideos
 
 from mrjoker import pbot
 from mrjoker.conf import get_str_key
-from mrjoker.pyrogramee.pluginshelper import get_text, progress
+from mrjoker.pyrogram.pluginshelper import get_text, progress
 
 GENIUS = get_str_key("GENIUS_API_TOKEN", None)
 
