@@ -67,3 +67,5 @@ asyncio
 ujson
 lyricsgenius
 envparse
+pytgcalls
+ffmpeg-python
