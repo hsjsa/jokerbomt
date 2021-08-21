@@ -1,18 +1,18 @@
-from mrjoker.events import register
 from mrjoker import telethn as tbot
+from mrjoker.events import register
+
 TMP_DOWNLOAD_DIRECTORY = "./"
-from telethon import events
 import os
 from PIL import Image
 from datetime import datetime
 from telegraph import Telegraph, upload_file, exceptions
-lh = "MRJOKER"
+Hero = "MrJoker"
 telegraph = Telegraph()
-r = telegraph.create_account(short_name=lh)
+r = telegraph.create_account(short_name=Hero)
 auth_url = r["auth_url"]
 
 
-@register(pattern="^/t(m|t) ?(.*)")
+@register(pattern="^/t(m|xt) ?(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -41,8 +41,8 @@ async def _(event):
                 end = datetime.now()
                 ms_two = (end - start).seconds
                 os.remove(downloaded_file_name)
-                await h.edit("Uploaded to https://telegra.ph{} in {} seconds.".format(media_urls[0], (ms + ms_two)), link_preview=True)
-        elif input_str == "t":
+                await h.edit("Uploaded to https://telegra.ph{})".format(media_urls[0]), link_preview=True)
+        elif input_str == "xt":
             user_object = await tbot.get_entity(r_message.sender_id)
             title_of_page = user_object.first_name # + " " + user_object.last_name
             # apparently, all Users do not have last_name field
@@ -78,13 +78,11 @@ def resize_image(image):
     im = Image.open(image)
     im.save(image, "PNG")
 
-file_help = os.path.basename(__file__)
-file_help = file_help.replace(".py", "")
-file_helpo = file_help.replace("_", " ")
 
 __help__ = """
- 🔹 /tm : Get Telegraph Link Of Replied Media
- 🔹 /tt: Get Telegraph Link of Replied Text
+I can upload files to Telegraph
+ ❍ /tm :Get Telegraph Link Of Replied Media
+ ❍ /txt :Get Telegraph Link of Replied Text
 """
 
-__mod_name__ = "Telegraph 📄"
+__mod_name__ = "Telegraph"
