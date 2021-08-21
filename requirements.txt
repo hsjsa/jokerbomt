@@ -69,3 +69,4 @@ lyricsgenius
 envparse
 pytgcalls
 ffmpeg-python
+simplejson
