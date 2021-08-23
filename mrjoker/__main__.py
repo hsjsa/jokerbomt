@@ -61,7 +61,7 @@ from mrjoker.modules.helper_funcs.alternate import typing_action
 from mrjoker.modules.helper_funcs.chat_status import is_user_admin
 from mrjoker.modules.helper_funcs.misc import paginate_modules
 from mrjoker.modules.helper_funcs.readable_time import get_readable_time
-from mrjoker.modules.stats import bot_sys_stats
+#from mrjoker.modules.stats import bot_sys_stats
     
 
 
