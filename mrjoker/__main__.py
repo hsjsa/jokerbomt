@@ -78,10 +78,12 @@ buttons = [
     [
         InlineKeyboardButton(text="⚡️ Help & Commands ⚡️", callback_data="help_back"),
     ],
+    ]
+        InlineKeyboardButton(text="System Stats 📊", callback_data="stats_callback"),
+     
+    ],
     [
-        InlineKeyboardButton(
-            text="☘️ Add Mr.Joker to your group ☘️", url="t.me/mrjokerpro_bot?startgroup=true"
-        ),
+        InlineKeyboardButton(text="☘️ Add Mr.Joker to your group ☘️", url="t.me/mrjokerpro_bot?startgroup=true"),
     ],
 ]
 
