@@ -116,7 +116,7 @@ async def job_close():
     for pro in chats:
         try:
             await tbot.send_message(
-              int(pro.chat_id), "12:00 Am, Group Is Closing Till 6 Am. Night Mode Started ! \n**Powered By Evlie**"
+              int(pro.chat_id), "12:00 Am, Group Is Closing Till 6 Am. Night Mode Started !**"
             )
             await tbot(
             functions.messages.EditChatDefaultBannedRightsRequest(
@@ -127,7 +127,7 @@ async def job_close():
             logger.info(f"Unable To Close Group {chat} - {e}")
 
 #Run everyday at 12am
-scheduler = AsyncIOScheduler(timezone="Asia/Kolkata")
+scheduler = AsyncIOScheduler(timezone="Asia/Colombo")
 scheduler.add_job(job_close, trigger="cron", hour=23, minute=59)
 scheduler.start()
 
@@ -155,10 +155,10 @@ scheduler.start()
 
 
 __help__ = f"""
- ❍ /nightmode on/off
+ 🔹 /nightmode on/off
  
 **Note:** Night Mode chats get Automatically closed at 12pm(IST)
 and Automatically openned at 6am(IST) To Prevent Night Spams.
 """
 
-__mod_name__ = "NightMode"
+__mod_name__ = "NightMode 🌙"
