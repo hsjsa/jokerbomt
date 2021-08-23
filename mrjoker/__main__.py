@@ -81,7 +81,7 @@ buttons = [
         InlineKeyboardButton(text="⚡️ Help & Commands ⚡️", callback_data="help_back"),
     ],
     ]
-        InlineKeyboardButton(text="System Stats 📊", callback_data="stats_callback"),
+        InlineKeyboardButton(text="System Stats 📊", callback_data="sys_stats"),
      
     ],
     [
