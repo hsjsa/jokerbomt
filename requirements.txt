@@ -67,3 +67,4 @@ asyncio
 ujson
 html_telegraph_poster
 apscheduler
+google_trans_new
