@@ -152,6 +152,7 @@ else:
         raise Exception("Your tiger users list does not contain valid integers.")
 
     EVENT_LOGS = Config.EVENT_LOGS
+    BOT_ID = Config.BOT_ID 
     WEBHOOK = Config.WEBHOOK
     URL = Config.URL
     PORT = Config.PORT
