@@ -37,32 +37,6 @@ EDIT_TIMES = 10
 
 
 
-
-#sleep how many times after each edit in 'earthanimation' 
-EDIT_SLEEP = 1
-#edit how many times in 'earthanimation' 
-EDIT_TIMES = 18
-
-
-#sleep how many times after each edit in 'moonanimation' 
-EDIT_SLEEP = 1
-#edit how many times in 'moonanimation' 
-EDIT_TIMES = 32
-
-
-
-#sleep how many times after each edit in 'clockanimation' 
-EDIT_SLEEP = 1
-#edit how many times in 'clockanimation' 
-EDIT_TIMES = 11
-
-
-#sleep how many times after each edit in 'blockanimation' 
-EDIT_SLEEP = 1
-#edit how many times in 'blockanimation' 
-EDIT_TIMES = 18
-
-
 #sleep how many times after each edit in 'kill' 
 EDIT_SLEEP = 1
 #edit how many times in 'kill' 
@@ -87,27 +61,6 @@ kill_you = [
             "**Target killed successfully"
 ]
 
-
-block_chain = [
-             "🟥",
-             "🟧",
-             "🟨",
-             "🟩",
-             "🟦",
-             "🟪",
-             "🟫",
-             "⬛",
-             "⬜",
-             "🟥",
-             "🟧",
-             "🟨",
-             "🟩",
-             "🟦",
-             "🟪",
-             "🟫",
-             "⬛",
-             "⬜"
-]
 
 
 
@@ -150,144 +103,6 @@ bomb_ettu = [
 
 
 
-moon_ani = [
-            "🌗",
-            "🌘",    
-            "🌑",
-            "🌒",
-            "🌓",
-            "🌔",
-            "🌕",
-            "🌖",
-            "🌗",
-            "🌘",    
-            "🌑",
-            "🌒",
-            "🌓",
-            "🌔",
-            "🌕",
-            "🌖",
-            "🌗",
-            "🌘",    
-            "🌑",
-            "🌒",
-            "🌓",
-            "🌔",
-            "🌕",
-            "🌖",
-            "🌗",
-            "🌘",    
-            "🌑",
-            "🌒",
-            "🌓",
-            "🌔",
-            "🌕",
-            "🌖"
- ]
-
-
-
-clock_ani = [
-            "🕙",
-            "🕘",    
-            "🕗",
-            "🕖",
-            "🕕",
-            "🕔",
-            "🕓",
-            "🕒",
-            "🕑",
-            "🕐",
-            "🕛"
-
-]
-
-
-
-
-
-
-
-
-earth_ani = [
-            "🌍",
-            "🌎",
-            "🌏",
-            "🌍",
-            "🌎",
-            "🌏",
-            "🌍",
-            "🌎",
-            "🌏",
-            "🌍",
-            "🌎",
-            "🌏",
-            "🌍",
-            "🌎",
-            "🌏",
-            "🌍",
-            "🌎",
-            "🌏"
-]
-
-
-@user_admin
-@run_async
-def blockanimation(update: Update, context: CallbackContext):
-    bot, args = context.bot, context.args
-    msg = update.effective_message.reply_text('⬜') 
-    for x in range(EDIT_TIMES):
-        msg.edit_text(block_chain[x%18])
-        time.sleep(EDIT_SLEEP)
-    msg.edit_text('🟥')
-
-
-
-
-@user_admin
-@run_async
-def clockanimation(update: Update, context: CallbackContext):
-    bot, args = context.bot, context.args
-    msg = update.effective_message
-    reply_text = msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
-    for x in range(EDIT_TIMES):
-        msg.edit_text(clock_ani[x%11])
-        time.sleep(EDIT_SLEEP)
-    msg.edit_text('🕚')
-
-
-
-@user_admin
-@run_async
-def earthanimation(update: Update, context: CallbackContext):
-    bot, args = context.bot, context.args
-    msg = update.effective_message
-    reply_text = msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text('🌏')
-    for x in range(EDIT_TIMES):
-        msg.edit_text(earth_ani[x%18])
-        time.sleep(EDIT_SLEEP)
-    msg.edit_text('🌍')
-
-
-
-
-@user_admin
-@run_async
-def moonanimation(update: Update, context: CallbackContext):
-    bot, args = context.bot, context.args
-    msg = update.effective_message.reply_text('🌚') 
-    for x in range(EDIT_TIMES):
-        msg.edit_text(moon_ani[x%32])
-        time.sleep(EDIT_SLEEP)
-    msg.edit_text('🌙')
-
-
-
-
-
-
-
-
 
 @user_admin
 @run_async
@@ -301,14 +116,6 @@ def bombs(update: Update, context: CallbackContext):
 
 
 
-
-
-
-
-
-
-
-
 @user_admin
 @run_async
 def hack(update: Update, context: CallbackContext):
@@ -318,9 +125,6 @@ def hack(update: Update, context: CallbackContext):
         msg.edit_text(hack_you[x%5])
         time.sleep(EDIT_SLEEP)
     msg.edit_text('successful hacked all data send on my Database')
-
-
-
 
 
 
@@ -356,10 +160,6 @@ __help__ = """
 🔹  /love*:* 
 🔹  /hack*:*
 🔹  /bombs*:*
-🔹  /moonanimation*:*
-🔹  /clockanimation*:*
-🔹  /earthanimation*:*
-🔹  /blockanimation*:*
 🔹  /kill*:*
 """
 
