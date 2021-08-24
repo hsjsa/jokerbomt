@@ -67,6 +67,7 @@ if ENV:
         raise Exception("Your tiger users list does not contain valid integers.")
 
     INFOPIC = bool(os.environ.get("INFOPIC", False))
+    BOT_ID = int(os.environ.get("BOT_ID", None))
     EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
     WEBHOOK = bool(os.environ.get("WEBHOOK", False))
     ARQ_API_URL = os.environ.get("ARQ_API_URL", None)
