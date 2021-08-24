@@ -262,7 +262,7 @@ def clockanimation(update: Update, context: CallbackContext):
 def earthanimation(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
     msg = update.effective_message
-    reply_text = msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
+    reply_text = msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text('🌏')
     for x in range(EDIT_TIMES):
         msg.edit_text(earth_ani[x%18])
         time.sleep(EDIT_SLEEP)
@@ -353,17 +353,17 @@ def kill(update: Update, context: CallbackContext):
 
 
 __help__ = """
--  /love*:* 
--  /hack*:*
--  /bombs*:*
--  /moonanimation*:*
--  /clockanimation*:*
--  /earthanimation*:*
--  /blockanimation*:*
--  /kill*:*
+🔹  /love*:* 
+🔹  /hack*:*
+🔹  /bombs*:*
+🔹  /moonanimation*:*
+🔹  /clockanimation*:*
+🔹  /earthanimation*:*
+🔹  /blockanimation*:*
+🔹  /kill*:*
 """
 
-__mod_name__ = "Animation"
+__mod_name__ = "Animation 🎆"
 
 
 KILL_HANDLER = DisableAbleCommandHandler("kill",kill)
