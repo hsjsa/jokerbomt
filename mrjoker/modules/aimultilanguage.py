@@ -12,7 +12,7 @@ from google_trans_new import google_translator
 from pyrogram import filters
 
 from mrjoker import BOT_ID
-from mrjoker.helper_extra.aichat import add_chat, get_session, remove_chat
+from mrjoker.utils.aichat import add_chat, get_session, remove_chat
 from mrjoker.pyrogramee.pluginshelper import admins_only, edit_or_reply
 from mrjoker import pbot as mrjoker
 
@@ -47,7 +47,7 @@ en_chats = []
 )
 @admins_only
 async def hmm(_, message):
-    global innexia_chats
+    global mrjoker_chats
     if len(message.command) != 2:
         await message.reply_text(
             "I only recognize `/chatbot on` and /chatbot `off only`"
@@ -59,20 +59,20 @@ async def hmm(_, message):
         lel = await edit_or_reply(message, "`Processing...`")
         lol = add_chat(int(message.chat.id))
         if not lol:
-            await lel.edit("innexia AI Already Activated In This Chat")
+            await lel.edit("Mr.Joker AI Already Activated In This Chat")
             return
         await lel.edit(
-            f"innexia AI Successfully Added For Users In The Chat {message.chat.id}"
+            f"Mr.Joker AI Successfully Added For Users In The Chat {message.chat.id}"
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
         lel = await edit_or_reply(message, "`Processing...`")
         Escobar = remove_chat(int(message.chat.id))
         if not Escobar:
-            await lel.edit("innexia AI Was Not Activated In This Chat")
+            await lel.edit("Mr.Joker AI Was Not Activated In This Chat")
             return
         await lel.edit(
-            f"innexia AI Successfully Deactivated For Users In The Chat {message.chat.id}"
+            f"Mr.Joker AI Successfully Deactivated For Users In The Chat {message.chat.id}"
         )
 
     elif status == "EN" or status == "en" or status == "english":
@@ -114,9 +114,9 @@ async def hmm(client, message):
         message.continue_propagation()
     if chat_id in en_chats:
         test = msg
-        test = test.replace("innexia", "Aco")
-        test = test.replace("innexia", "Aco")
-        URL = "https://api.affiliateplus.xyz/api/chatbot?message=hi&botname=@innexiaBot&ownername=@useIes"
+        test = test.replace("mrjoker", "Aco")
+        test = test.replace("mrjoker", "Aco")
+        URL = "https://api.affiliateplus.xyz/api/chatbot?message=hi&botname=@Mrjokerlk_bot&ownername=@kavinduaj"
 
         try:
             r = requests.request("GET", url=URL)
@@ -130,7 +130,7 @@ async def hmm(client, message):
 
         pro = result["message"]
         try:
-            await innexia.send_chat_action(message.chat.id, "typing")
+            await mrjoker.send_chat_action(message.chat.id, "typing")
             await message.reply_text(pro)
         except CFError:
             return
@@ -176,10 +176,9 @@ async def hmm(client, message):
                 return
         # test = emoji.demojize(test.strip())
 
-        # Kang with the credits bitches @InukaASiTH
-        test = test.replace("innexia", "Aco")
-        test = test.replace("innexia", "Aco")
-        URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@innexiaBot&ownername=@useIes"
+        test = test.replace("mrjoker", "Aco")
+        test = test.replace("mrjoker", "Aco")
+        URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@Mrjokerlk_bot&ownername=@kavinduaj"
         try:
             r = requests.request("GET", url=URL)
         except:
@@ -196,7 +195,7 @@ async def hmm(client, message):
             except:
                 return
         try:
-            await innexia.send_chat_action(message.chat.id, "typing")
+            await mrjoker.send_chat_action(message.chat.id, "typing")
             await message.reply_text(pro)
         except CFError:
             return
@@ -250,10 +249,9 @@ async def inuka(client, message):
 
     # test = emoji.demojize(test.strip())
 
-    # Kang with the credits bitches @InukaASiTH
-    test = test.replace("innexia", "Aco")
-    test = test.replace("innexia", "Aco")
-    URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@innexiaBot&ownername=@useIes"
+    test = test.replace("mrjoker", "Aco")
+    test = test.replace("mrjoker", "Aco")
+    URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@Mrjokerlk_bot&ownername=@kavinduaj"
     try:
         r = requests.request("GET", url=URL)
     except:
@@ -275,7 +273,7 @@ async def inuka(client, message):
 
 
 @innexia.on_message(
-    filters.regex("innexia|innexia|innexia|innexia|innexia")
+    filters.regex("mrjoker|mrjoker|mrjoker|mrjoker|mrjoker")
     & ~filters.bot
     & ~filters.via_bot
     & ~filters.forwarded
@@ -328,10 +326,9 @@ async def inuka(client, message):
 
     # test = emoji.demojize(test.strip())
 
-    # Kang with the credits bitches @InukaASiTH
-    test = test.replace("innexia", "Aco")
-    test = test.replace("innexia", "Aco")
-    URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@innexiaBot&ownername=@useIes"
+    test = test.replace("mrjoker", "Aco")
+    test = test.replace("mrjoker", "Aco")
+    URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@Mrjokerlk_bot&ownername=@kavinduaj"
     try:
         r = requests.request("GET", url=URL)
     except:
@@ -348,7 +345,7 @@ async def inuka(client, message):
         except Exception:
             return
     try:
-        await innexia.send_chat_action(message.chat.id, "typing")
+        await mrjoker.send_chat_action(message.chat.id, "typing")
         await message.reply_text(pro)
     except CFError:
         return
