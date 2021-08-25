@@ -64,7 +64,7 @@ RUN apt update && apt upgrade -y && \
 RUN pip3 install --upgrade pip setuptools
 
 # Copy Python Requirements to /root/innexiaBot
-RUN git clone -b shiken https://github.com/kavinduaj12/MRJOKERNEWBOT /root/mrjoker
+RUN git clone -b main https://github.com/kavinduaj12/MRJOKERNEWBOT /root/mrjoker
 WORKDIR /root/mrjoker
 
 #Copy config file to /root/innexiaBot/innexiaBot
