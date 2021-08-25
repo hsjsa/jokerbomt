@@ -70,3 +70,5 @@ apscheduler
 google_trans_new
 envparse
 pymongo
+odmantic 
+dnspython 
