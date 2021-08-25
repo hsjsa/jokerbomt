@@ -190,6 +190,7 @@ else:
     ARQ_API_URL = Config.ARQ_API_URL
     ARQ_API_KEY = Config.ARQ_API_KEY
     MONGO_DB_URI = Config.MONGO_DB_URI
+    MONGO_PORT = Config.MONGO_PORT 
     OPENWEATHERMAP_ID = Config.OPENWEATHERMAP_ID
     
     try:
