@@ -1,23 +1,42 @@
+# Copyright (C) 2021 Red-Aura & TeamDaisyX & HamkerCat
+
+# This file is part of AsunaRobot (Telegram Bot)
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import re
 
 import emoji
 
-IBM_WATSON_CRED_URL = "https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/bd6b59ba-3134-4dd4-aff2-49a79641ea15"
-IBM_WATSON_CRED_PASSWORD = "UQ1MtTzZhEsMGK094klnfa-7y_4MCpJY1yhd52MXOo3Y"
 url = "https://acobot-brainshop-ai-v1.p.rapidapi.com/get"
 import re
 
 import aiohttp
-from google_trans_new import google_translator
+
+# from google_trans_new import google_translator
+from googletrans import Translator as google_translator
 from pyrogram import filters
 
-from mrjoker import BOT_ID
+from mrjoker import BOT_ID, pbot as mrjoker
 from mrjoker.utils.aichat import add_chat, get_session, remove_chat
-from mrjoker.pyrogramee.pluginshelper import admins_only, edit_or_reply
-from mrjoker import pbot as mrjoker
+from mrjoker.pyrogram.pluginshelper import admins_only, edit_or_reply
 
 translator = google_translator()
-import requests
+
+
+async def lunaQuery(query: str, user_id: int):
+    luna = await arq.luna(query, user_id)
+    return luna.result
 
 
 def extract_emojis(s):
@@ -39,15 +58,24 @@ async def fetch(url):
         return
 
 
-innexia_chats = []
+mrjoker_chats = []
 en_chats = []
 
-@innexia.on_message(
+from Python_ARQ import ARQ   
+from aiohttp import ClientSession
+ARQ_API_URL = "https://thearq.tech"
+ARQ_API_KEY = "ULYTMW-MOFYPS-KLWEUW-KNQWVO-ARQ"
+
+aiohttpsession = ClientSession()
+arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
+
+
+@mrjoker.on_message(
     filters.command("chatbot") & ~filters.edited & ~filters.bot & ~filters.private
 )
 @admins_only
 async def hmm(_, message):
-    global mrjoker_chats
+    global erza_chats
     if len(message.command) != 2:
         await message.reply_text(
             "I only recognize `/chatbot on` and /chatbot `off only`"
@@ -59,10 +87,10 @@ async def hmm(_, message):
         lel = await edit_or_reply(message, "`Processing...`")
         lol = add_chat(int(message.chat.id))
         if not lol:
-            await lel.edit("Mr.Joker AI Already Activated In This Chat")
+            await lel.edit("Erza AI Already Activated In This Chat")
             return
         await lel.edit(
-            f"Mr.Joker AI Successfully Added For Users In The Chat {message.chat.id}"
+            f"Erza AI Successfully Added For Users In The Chat {message.chat.id}"
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
@@ -88,7 +116,7 @@ async def hmm(_, message):
         )
 
 
-@innexia.on_message(
+@mrjoker.on_message(
     filters.text
     & filters.reply
     & ~filters.bot
@@ -114,21 +142,15 @@ async def hmm(client, message):
         message.continue_propagation()
     if chat_id in en_chats:
         test = msg
-        test = test.replace("mrjoker", "Aco")
-        test = test.replace("mrjoker", "Aco")
-        URL = "https://api.affiliateplus.xyz/api/chatbot?message=hi&botname=@Mrjokerlk_bot&ownername=@kavinduaj"
+        test = test.replace("erza", "Aco")
+        test = test.replace("Erza", "Aco")
+        response = await lunaQuery(
+            test, message.from_user.id if message.from_user else 0
+        )
+        response = response.replace("Aco", "mrjoker")
+        response = response.replace("aco", "mrjoker")
 
-        try:
-            r = requests.request("GET", url=URL)
-        except:
-            return
-
-        try:
-            result = r.json()
-        except:
-            return
-
-        pro = result["message"]
+        pro = response
         try:
             await mrjoker.send_chat_action(message.chat.id, "typing")
             await message.reply_text(pro)
@@ -166,32 +188,32 @@ async def hmm(client, message):
             # print (rm)
         try:
             lan = translator.detect(rm)
+            lan = lan.lang
         except:
             return
         test = rm
         if not "en" in lan and not lan == "":
             try:
-                test = translator.translate(test, lang_tgt="en")
+                test = translator.translate(test, dest="en")
+                test = test.text
             except:
                 return
         # test = emoji.demojize(test.strip())
 
         test = test.replace("mrjoker", "Aco")
-        test = test.replace("mrjoker", "Aco")
-        URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@Mrjokerlk_bot&ownername=@kavinduaj"
-        try:
-            r = requests.request("GET", url=URL)
-        except:
-            return
-
-        try:
-            result = r.json()
-        except:
-            return
-        pro = result["message"]
+        test = test.replace("Mrjoker", "Aco")
+        response = await lunaQuery(
+            test, message.from_user.id if message.from_user else 0
+        )
+        response = response.replace("Aco", "Mrjoker")
+        response = response.replace("aco", "Mrjoker")
+        response = response.replace("Luna", "Mrjoker")
+        response = response.replace("luna", "Mrjoker")
+        pro = response
         if not "en" in lan and not lan == "":
             try:
-                pro = translator.translate(pro, lang_tgt=lan[0])
+                pro = translator.translate(pro, dest=lan)
+                pro = pro.text
             except:
                 return
         try:
@@ -201,7 +223,7 @@ async def hmm(client, message):
             return
 
 
-@innexia.on_message(
+@mrjoker.on_message(
     filters.text & filters.private & ~filters.edited & filters.reply & ~filters.bot
 )
 async def inuka(client, message):
@@ -238,42 +260,40 @@ async def inuka(client, message):
         # print (rm)
     try:
         lan = translator.detect(rm)
+        lan = lan.lang
     except:
         return
     test = rm
     if not "en" in lan and not lan == "":
         try:
-            test = translator.translate(test, lang_tgt="en")
+            test = translator.translate(test, dest="en")
+            test = test.text
         except:
             return
 
     # test = emoji.demojize(test.strip())
 
+    # Kang with the credits bitches @InukaASiTH
     test = test.replace("mrjoker", "Aco")
-    test = test.replace("mrjoker", "Aco")
-    URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@Mrjokerlk_bot&ownername=@kavinduaj"
-    try:
-        r = requests.request("GET", url=URL)
-    except:
-        return
+    test = test.replace("Mrjoker", "Aco")
 
-    try:
-        result = r.json()
-    except:
-        return
+    response = await lunaQuery(test, message.from_user.id if message.from_user else 0)
+    response = response.replace("Aco", "Mrjoker")
+    response = response.replace("aco", "Mrjoker")
 
-    pro = result["message"]
+    pro = response
     if not "en" in lan and not lan == "":
-        pro = translator.translate(pro, lang_tgt=lan[0])
+        pro = translator.translate(pro, dest=lan)
+        pro = pro.text
     try:
-        await innexia.send_chat_action(message.chat.id, "typing")
+        await mrjoker.send_chat_action(message.chat.id, "typing")
         await message.reply_text(pro)
     except CFError:
         return
 
 
-@innexia.on_message(
-    filters.regex("mrjoker|mrjoker|mrjoker|mrjoker|mrjoker")
+@mrjoker.on_message(
+    filters.regex("Mrjoker|mrjoker|mrjoker|Mrjoker|Mrjoker")
     & ~filters.bot
     & ~filters.via_bot
     & ~filters.forwarded
@@ -281,7 +301,7 @@ async def inuka(client, message):
     & ~filters.channel
     & ~filters.edited
 )
-async def inuka(client, message):
+async def kaj(client, message):
     msg = message.text
     if msg.startswith("/") or msg.startswith("@"):
         message.continue_propagation()
@@ -315,33 +335,30 @@ async def inuka(client, message):
         # print (rm)
     try:
         lan = translator.detect(rm)
+        lan = lan.lang
     except:
         return
     test = rm
     if not "en" in lan and not lan == "":
         try:
-            test = translator.translate(test, lang_tgt="en")
+            test = translator.translate(test, dest="en")
+            test = test.text
         except:
             return
 
     # test = emoji.demojize(test.strip())
 
     test = test.replace("mrjoker", "Aco")
-    test = test.replace("mrjoker", "Aco")
-    URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@Mrjokerlk_bot&ownername=@kavinduaj"
-    try:
-        r = requests.request("GET", url=URL)
-    except:
-        return
+    test = test.replace("Mrjoker", "Aco")
+    response = await lunaQuery(test, message.from_user.id if message.from_user else 0)
+    response = response.replace("Aco", "Mrjoker")
+    response = response.replace("aco", "Mrjoker")
 
-    try:
-        result = r.json()
-    except:
-        return
-    pro = result["message"]
+    pro = response
     if not "en" in lan and not lan == "":
         try:
-            pro = translator.translate(pro, lang_tgt=lan[0])
+            pro = translator.translate(pro, dest=lan)
+            pro = pro.text
         except Exception:
             return
     try:
@@ -352,10 +369,16 @@ async def inuka(client, message):
 
 
 __help__ = """
-<b> Chatbot </b>
-innexia AI 3.0 IS THE ONLY AI SYSTEM WHICH CAN DETECT & REPLY UPTO 200 LANGUAGES
+<b> AI Chatbot </b>
+Erza AI 3.0 IS THE ONLY AI SYSTEM WHICH CAN DETECT & REPLY UPTO 200 LANGUAGES
+
  - /chatbot [ON/OFF]: Enables and disables AI Chat mode (EXCLUSIVE)
  - /chatbot EN : Enables English only chatbot
+ 
+ 
+<b> Chatbot </b>
+ - /ask [question]: Ask question from Erza
+ - /ask [reply to voice note]: Get voice reply
  
 """
 
