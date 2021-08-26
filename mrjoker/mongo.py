@@ -5,7 +5,7 @@ from motor import motor_asyncio
 from pymongo import MongoClient
 from pymongo.errors import ServerSelectionTimeoutError
 #from mrjoker import LOGGER
-from mrjoker import MONGO_DB_URI, MONGO_PORT 
+from mrjoker import MONGO_DB_URI #, MONGO_PORT 
 from mrjoker.conf import get_int_key, get_str_key
 
 MONGO_PORT = get_int_key("MONGO_PORT")
