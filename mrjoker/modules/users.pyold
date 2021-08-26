@@ -43,7 +43,7 @@ def get_user_id(username):
                 userdat = dispatcher.bot.get_chat(user_obj.user_id)
                 if userdat.username == username:
                     return userdat.id
-
+t
             except BadRequest as excp:
                 if excp.message == "Chat not found":
                     pass
