@@ -69,6 +69,6 @@ html_telegraph_poster
 apscheduler
 google_trans_new
 envparse
-pymongo==3.11.0
+pymongo
 odmantic 
 dnspython 
