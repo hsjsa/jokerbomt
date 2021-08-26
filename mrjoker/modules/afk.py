@@ -8,7 +8,7 @@ from telegram.ext import CallbackContext, Filters, MessageHandler, run_async
 from mrjoker import dispatcher
 from mrjoker.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
 from mrjoker.modules.sql import afk_sql as sql
-from mrjoker.modules.users import get_user_id
+from mrjoker.modules.user import get_user_id
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
