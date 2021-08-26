@@ -20,4 +20,4 @@ db = client["mrjoker"]
 try:
     asyncio.get_event_loop().run_until_complete(motor.server_info())
 except ServerSelectionTimeoutError:
-    sys.exit(log.critical("Can't connect to mongodb! Exiting.."))
+    sys.exit(log.critical("Can't connect to mongodb! Exiting..."))
