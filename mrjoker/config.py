@@ -81,7 +81,7 @@ class Config(object):
     INFOPIC =""
     TEMP_DOWNLOAD_DIRECTORY = "./"
     REM_BG_API_KEY = "gQXc1AuEraj3numU671LhNhW"
-    MONGO_DB_URI = "mongodb+srv://mrjoker:dkkaj@cluster0.ooq0i.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    MONGO_DB_URI = "mongodb+srv://mrjoker:joker@mrjoker.r7mda.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
     #MONGO_DB = "mrjoker"
     #MONGO_PORT = 27017
 
