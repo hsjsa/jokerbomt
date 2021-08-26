@@ -173,12 +173,8 @@ def __migrate__(old_chat_id, new_chat_id):
     sql.migrate_chat(old_chat_id, new_chat_id)
 
 
-__help__ = """  
-/broadcastall
-/broadcastusers
-/broadcastgroups
-"""
-__mod_name__ = "Users 👮‍♂️"
+__help__ = "" 
+
 
 BROADCAST_HANDLER = CommandHandler(
     ["broadcastall", "broadcastusers", "broadcastgroups"], broadcast
@@ -192,6 +188,6 @@ dispatcher.add_handler(BROADCAST_HANDLER)
 dispatcher.add_handler(CHATLIST_HANDLER)
 dispatcher.add_handler(CHAT_CHECKER_HANDLER, CHAT_GROUP)
 
-__command_list__ = ["broadcastall", "broadcastusers", "broadcastgroups"]
+__mod_name__ = "Users 👮‍♂️"
 
 __handlers__ = [(USER_HANDLER, USERS_GROUP), BROADCAST_HANDLER, CHATLIST_HANDLER]
