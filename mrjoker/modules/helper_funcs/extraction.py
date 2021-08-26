@@ -6,7 +6,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 
 from mrjoker import LOGGER
-from mrjoker.modules.users import get_user_id
+from mrjoker.modules.user import get_user_id
 
 
 def id_from_reply(message):
