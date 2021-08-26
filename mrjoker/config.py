@@ -39,7 +39,7 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = "postgresql://postgres:xsrDxZxEs8pLhCudhkHF@containers-us-west-12.railway.app:7044/railway"  
     REDIS_URI = "redis://default:oCSncAKDtwhxRKJvl715@containers-us-west-11.railway.app:5601"
     LOAD = []
-    NO_LOAD = ["rss", "cleaner", "connection", "math"]
+    NO_LOAD = ["rss","math"]
     WEBHOOK = False
     INFOPIC = True
     URL = None
