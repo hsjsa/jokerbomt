@@ -71,10 +71,10 @@ async def hmm(_, message):
         lel = await edit_or_reply(message, "`Processing...`")
         lol = add_chat(int(message.chat.id))
         if not lol:
-            await lel.edit("Erza AI Already Activated In This Chat")
+            await lel.edit("Mr.Joker AI Already Activated In This Chat")
             return
         await lel.edit(
-            f"Erza AI Successfully Added For Users In The Chat {message.chat.id}"
+            f"Mr.Joker AI Successfully Added For Users In The Chat {message.chat.id}"
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
@@ -126,8 +126,8 @@ async def hmm(client, message):
         message.continue_propagation()
     if chat_id in en_chats:
         test = msg
-        test = test.replace("erza", "Aco")
-        test = test.replace("Erza", "Aco")
+        test = test.replace("mrjoker", "Aco")
+        test = test.replace("Mrjoker", "Aco")
         response = await lunaQuery(
             test, message.from_user.id if message.from_user else 0
         )
@@ -366,4 +366,4 @@ Erza AI 3.0 IS THE ONLY AI SYSTEM WHICH CAN DETECT & REPLY UPTO 200 LANGUAGES
  
 """
 
-__mod_name__ = "Chatbot"
+__mod_name__ = "AI Chat"
